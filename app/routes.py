@@ -15,15 +15,15 @@ from werkzeug.urls import url_parse
 @app.route('/index')
 @login_required 
 def index():
-    user = {'username': 'karan'}
-    post = [{'author':{'username':'utkarsh'},
-             'body':'qwertyuio'
-            },
-            {'author':{'username':'sashi'},
-             'body':'zxcvbnm'
-            }
-        ]
-    return render_template('index.html', user=user, title='Home', post=post)
+#    user = {'username': 'karan'}
+#   posts = [{'author':{'username':'utkarsh'},
+#             'body':'qwertyuio'
+#            },
+#            {'author':{'username':'sashi'},
+#             'body':'zxcvbnm'
+#            }
+#        ]
+    return render_template("index.html", title='Home Page')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 #if user already logged in redirect to index    
